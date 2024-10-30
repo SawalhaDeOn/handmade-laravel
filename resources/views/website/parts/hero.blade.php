@@ -1,20 +1,16 @@
 <section id="hero" class="hero">
     <div class="home">
-        <h2>شغل يدي</h2>
+        <h2>{{__('Handmade')}}</h2>
         <div class="origin-story-box">
-            أصل الحكاية
+            {{__('The origin of the story')}}
         </div>
     </div>
     <div  id="about-us" class="product-categories">
         <p>
-            <br> الشركة الفلسطينية الأولى التي تحتضن جميع الأعمال الحرفية اليدوية والتراثية ذات الطابع الوطني
-            والثقافي
-            من كافة أنحاء الوطن.
-            <br> نسعى إلى تعزيز الاقتصاد الفلسطيني من خلال الترويج للحرف اليدوية التي تعكس التراث والهوية
-            الفلسطينية.
-            تصنيفات المنتجات نرحب بجميع أنواع المنتجات التراثية والحرفية اليدوية بما في ذلك: المطرزات، الإكسسوارات،
-            الأعمال الخشبية، الشموع اليدوية، وغيرها العديد من الحرف اليدوية المبتكرة.
+            {{__('The first Palestinian company to embrace all handmade crafts and heritage works with a national and cultural character from all parts of the homeland. We aim to strengthen the Palestinian economy by promoting handicrafts that reflect Palestinian heritage and identity. Product Categories: We welcome all types of heritage and handmade crafts, including embroidery, accessories, woodwork, handmade candles, and many other innovative handicrafts.')}}
+
         </p>
+
         <h2>تصنيفات المنتجات</h2>
         <p>نرحب بجميع أنواع المنتجات التراثية والحرفية اليدوية بما في ذلك:</p>
         <ul>
@@ -25,6 +21,7 @@
             <li>العديد من الحرف اليدوية المبتكرة</li>
         </ul>
     </div>
+
 
     <div id="carouselExampleCaptions" class="carousel slide">
         <div class="over-layer"></div>

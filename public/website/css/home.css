@@ -19,13 +19,13 @@
 
 .product-categories h1 {
     color: white;
-    font-size: 40px;
+    font-size: 10px;
 
 }
 
 .product-categories h2 {
     color: #B48B2E;
-    font-size: 40px;
+    font-size: 10px;
 
 }
 
@@ -51,7 +51,8 @@
     align-items: center;
     justify-content: center;
     margin: 20px auto;
-    font-size: 100px;
+    font-size: 50px;
+
     color: #FFF;
     border-radius: 50px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
