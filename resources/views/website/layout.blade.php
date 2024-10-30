@@ -26,12 +26,10 @@
     @if($lang==2 || $lang==3)
         <link rel="stylesheet" href="website/css/home.css"/>
         <link rel="stylesheet" href="website/css/footer.css"/>
-        <link rel="stylesheet" href="website/css/about-us.css"/>
-        <link rel="stylesheet" href="website/css/prodect.css"/>
+        <link rel="stylesheet" href="website/css/join-us.css"/>
     @else
         <link rel="stylesheet" href="website/css/footer-en.css"/>
-        <link rel="stylesheet" href="website/css/prodect-en.css"/>
-        <link rel="stylesheet" href="website/css/about-us-en.css"/>
+        <link rel="stylesheet" href="website/css/join-us-en.css"/>
         <link rel="stylesheet" href="website/css/home-en.css"/>
     @endif
 
