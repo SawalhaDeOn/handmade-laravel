@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@500&display=swap");
+
+.over-layer {
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 700px;
+    z-index: 1;
+
+}
+.nav-container
+{
+    z-index: 1;
+}
+body {
+    font-family: "Tajawal", sans-serif;
+
+}
+.hero {
+    background:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    height: 700px;
+    background-size: cover;
+    overflow: hidden;
+    width: 100%
+}
+
+
+.carousel-caption {
+
+    top: 25% !important;
+    height: 700px;
+    text-align: left!important;
+}
+
+.hero-content .carousel-caption h1 {
+    font-size: calc(0.7*60px);
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.3s;
+
+
+}
+.carousel-item
+{
+
+    height: 700px;
+}
+.carousel-item img
+{
+    height: 700px;
+    object-fit: cover;
+}
+.carousel-caption h1 {
+    z-index: 2;
+    position: relative;
+}
+.carousel-caption p {
+    z-index: 2;
+    position: relative;
+}
+.hero-content .carousel-caption p {
+    font-size: calc(0.7*25px);
+    line-height: 1.5;
+    margin-top: calc(0.7*50px);
+    opacity: 0;
+    animation: slideIn 1s ease-in-out forwards;
+    animation-delay: 0.4s;
+}
+
+button {
+    background-color: #aad3f8;
+    color: #2f195f;
+    border: none;
+    border-radius: calc(0.7*10px);
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+   margin-bottom: 5%;
+
+}
+
+.carousel-indicators button {
+    width: calc(30px) !important;
+    height: calc(30px) !important;
+    background-color: #ccc  !important;
+    border-radius: 50%  !important;
+    margin-right: 15px !important;
+    margin-left: 15px  !important;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.navbar-nav
+{
+    margin-left: 5%;
+}
+.carousel-indicators button.active {
+    background-color: #2f195f !important;
+}
+.likecontainer {
+
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .likecontainer {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .likecontainer {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .likecontainer {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .likecontainer {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .likecontainer {
+        max-width: 1320px;
+    }
+}
+
+.carousel-indicators button {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.carousel-indicators button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    position: relative;
+    z-index: 2;
+}
+

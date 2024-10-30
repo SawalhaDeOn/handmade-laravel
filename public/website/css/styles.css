@@ -1,0 +1,105 @@
+
+header {
+    background-color: #FFFFFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+
+}
+.navbar-nav li{
+    width:20%;
+    font-weight: bold;
+}
+.navbar-nav
+{
+
+    width: 100%;
+}
+
+
+
+.navbar-top a{
+    color: #7F7F00;
+    text-decoration: underline dashed #7F7F00;
+    text-underline-offset: 10px;
+}
+.navbar a{
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.navbar-toggler
+{
+    color: #000000;
+    position: relative;
+    display: inline;
+    top: auto;
+    height: 60px;
+    width: 60px;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+
+}
+
+.navbar-top  .dropdown-menu  a{
+    color: #7F7F00 !important;
+}
+
+.login-button {
+    width: 245px;
+
+    background-color: #7F7F00;
+    color: #FFFFFF;
+    text-align: center;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 30px;
+
+}
+
+.login-button a {
+    color: #FFFFFF;
+}
+
+ .login-button:hover a {
+    color: #FFFFFF;
+}
+
+
+@media (max-width: calc(768px)) {
+    .navbar-nav li{
+        width:100%;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 5px;
+        border-bottom: 1px dashed #2f195f ;
+
+    }
+
+    .login-button{
+        margin: 0px;
+    }
+
+}
+
+@media (max-width: calc(480px)) {
+    .navbar-nav li{
+        width:100%;
+        font-weight: bold;
+        margin-right: 0px;
+
+    } .login-button{
+          margin: 0px;
+      }
+
+
+}
