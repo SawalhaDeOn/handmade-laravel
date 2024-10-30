@@ -1,5 +1,4 @@
 <div class="container">
-    <div class="white-space"></div>
 <section id="services" class="join-us-container">
     <div class="title">انضم إلينا</div>
     <p>اذا كنت حرفياً وترغب في عرض منتجاتك قم بتعبئة النموذج أدناه . وسنقوم بالتواصل معك قريباً على ان تكون المنتجات
@@ -77,7 +76,7 @@
                 </div>
             </div>
 
-            <button class="submit">إرسال</button>
+            <button class="submit-join">إرسال</button>
 
         </div>
     </form>

@@ -3,11 +3,8 @@ body{
     font-family: Tajawal Medium;
 }
 .join-us-container {
-    max-width: 1167px;
-    margin: 50px auto;
     background-color: white;
     border-radius: 10px;
-    max-height: 900px;
 }
 
 .join-us-container .title {
@@ -68,7 +65,7 @@ p {
     margin: 25px;
 }
 
-.submit {
+.submit-join  {
     background-color: #7F7F00;
     color: white;
     border: none;
@@ -80,7 +77,6 @@ p {
     justify-content: center;
     margin-top: 25px;
     width: 297px;
-    margin-bottom: 25vw;
 
 }
 

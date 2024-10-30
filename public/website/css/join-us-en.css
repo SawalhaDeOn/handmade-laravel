@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
-
-
+body{
+    font-family: Tajawal Medium;
+}
 .join-us-container {
+    margin: 50px auto;
     background-color: white;
     border-radius: 10px;
 }
 
 .join-us-container .title {
-    font-size: 2.5rem;
+    font-size: 50px;
     font-weight: bold;
     text-align: center;
     margin-bottom: 10px;
@@ -15,27 +17,34 @@
 
 .join-us-container p {
     text-align: center;
-    margin-bottom: 40px;
-    font-size: 1.5rem;
+    margin-bottom:40px;
+}
+
+p {
     font-weight: 500;
+    margin-right: 0px;
+    font-size: 24.5px;
 }
 
 .text1, .text2, .text3 {
     background-color: #B48B2E;
     color: white;
-    padding: 10px;
+    padding: 5px;
     border-radius: 50px;
     font-weight: 500;
     text-align: center;
-    width: 100%;
-    max-width: 310px;
-    margin: 11px auto;
-    font-size: 1.5rem;
+    width: 310px;
+    justify-content: center;
+    align-items: center;
+    margin: 11px;
+    font-size: 25PX;
 }
 
+
 .join-us-form label {
-    font-size: 1.5rem;
+    font-size: 30px;
     font-weight: bold;
+
     color: #000000;
 }
 
@@ -45,44 +54,54 @@
 .join-us-form input[type="tel"],
 .join-us-form input[type="file"] {
     border: 2px solid #B48B2E;
-    font-size: 1.4rem;
+    font-size: 22px;
     color: #000000;
     border-radius: 20px;
     padding: 10px;
     margin-top: 20px;
     margin-bottom: 10px;
-    width: 100%;
-    box-sizing: border-box;
 }
 
+#terms {
+    margin: 25px;
+}
 
+.submit-join  {
+    background-color: #7F7F00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    justify-content: center;
+    margin-top: 25px;
+    width: 297px;
+
+}
 
 .submit:hover {
     background-color: #B48B2E;
 }
-
 .form-group .check-box {
-    font-size: 1.5rem;
+    font-size: 40px;
     color: #333;
 }
-
 input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    accent-color: #7F7F00;
+    transform: scale(1.5);
     margin-right: 10px;
-}
 
+}
 .input-wrapper {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    flex-wrap: wrap;
 }
 
 .label {
     margin-left: 10px;
-    font-size: 1.5rem;
+    font-size: 30px;
     color: #000;
 }
 
@@ -93,21 +112,22 @@ input[type="checkbox"] {
     margin-top: 20px;
     margin-bottom: 10px;
     width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
     justify-content: space-between;
 }
 
 .icon-label {
     padding: 5px;
     cursor: pointer;
+    margin-right: 85%;
     display: flex;
     align-items: center;
+    justify-self: end;
+
 }
 
 #product-image {
     display: flex;
+    justify-self: start;
 }
 
 .custom-checkbox {
@@ -117,10 +137,19 @@ input[type="checkbox"] {
     accent-color: #7F7F00;
     border: 2px solid #B48B2E;
 }
+.submit:hover {
+    background-color: #B48B2E;
+}
 
 .form-group label {
-    font-size: 1.2rem;
+    font-size: 18px;
     color: #333;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #7F7F00;
 }
 
 @media (max-width: 768px) {
@@ -130,22 +159,25 @@ input[type="checkbox"] {
     }
 
     .join-us-container .title {
-        font-size: 2rem;
+        font-size: 5vw;
     }
 
-    .join-us-container p,
+    .join-us-container p {
+        font-size: 4vw;
+    }
+
     p {
-        font-size: 1.2rem;
+        font-size: 4vw;
     }
 
     .text1, .text2, .text3 {
-        width: 90%;
-        font-size: 1.2rem;
-        margin: 10px auto;
+        width: 80%;
+        font-size: 4vw;
+        margin: 10px;
     }
 
     .submit {
-        font-size: 1.1rem;
+        font-size: 5vw;
     }
 }
 
@@ -156,35 +188,24 @@ input[type="checkbox"] {
     }
 
     .join-us-container .title {
-        font-size: 1.5rem;
+        font-size: 6vw;
     }
 
-    .join-us-container p,
+    .join-us-container p {
+        font-size: 5vw;
+    }
+
     p {
-        font-size: 1rem;
+        font-size: 5vw;
     }
 
     .text1, .text2, .text3 {
-        width: 100%;
-        font-size: 1rem;
-        margin: 10px auto;
+        width: 90%;
+        font-size: 5vw;
+        margin: 10px;
     }
 
     .submit {
-        font-size: 1rem;
-    }
-
-    .input-wrapper {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .file-input-wrapper {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .icon-label {
-        margin-bottom: 10px;
+        font-size: 6vw;
     }
 }
