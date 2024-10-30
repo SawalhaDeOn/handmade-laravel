@@ -68,7 +68,7 @@
             </div>
 
         </div>
-        <div class="container d-flex flex-column justify-content-center align-items-center" style="height: 100vh;">
+        <div class="container d-flex flex-column justify-content-center align-items-center" style="height: 35vh;">
             <div class="row w-100 justify-content-center">
                 <div class="col-md-6 form-group d-flex align-items-center justify-content-center">
                     <input type="checkbox" id="terms" name="terms" required class="custom-checkbox">
