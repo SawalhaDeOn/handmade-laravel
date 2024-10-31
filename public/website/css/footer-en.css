@@ -1,0 +1,224 @@
+footer {
+
+    background-color: #513932;
+    color: #FFFFFF;
+    text-align: center;
+    position: relative;
+    font-family: "Tajawal";
+}
+
+.contact-us {
+    align-items: center;
+    padding-top: 5rem;
+}
+
+.contact-info {
+    text-align: left;
+}
+
+
+.handmade{
+
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 20px;
+}
+
+
+.contact-info h2 {
+    font-size: calc(0.7 * 50px);
+    margin-bottom: calc(0.7 * 15px);
+    color: #FFFFFF;
+    font-weight: bold;
+
+}
+
+.contact-info p {
+    font-size: calc(0.7 * 20px);
+    margin: calc(0.7 * 5px) 0;
+}
+
+.contact-info .handmade .logo-handmade {
+    height: calc(0.7 * 153px);
+
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: calc(0.7 * 5px);
+
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: calc(0.7 * 20px);
+    margin: calc(0.7 * 0px) calc(0.7 * 10px);
+    text-decoration: none;
+}
+
+.social-icons {
+    color: #FFFFFF;
+    margin-top: calc(0.7 * 20px);
+    height: calc(0.7 * 44px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: calc(0.7 * 24px);
+    margin: 0 calc(0.7 * 10px);
+    transition: color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+    text-decoration: none;
+
+}
+
+.social-icons a:hover {
+    background-color: #A7A548;
+    color: #FFFFFF;
+}
+
+.social-icons a:nth-child(1) {
+    background-color: #A7A548;
+    border-color: #A7A548;
+}
+
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: calc(0.7 * 10px);
+    font-size: calc(0.7 * 16px);
+    background-color: transparent;
+    border: 1px solid #ddd;
+    color: #FFFFFF;
+    border-radius: 7px;
+
+
+
+}
+.submit {
+    background-color: #fff;
+    color: black;
+    font-size: calc(0.7 * 18px);
+    border: none;
+    height: calc(0.7 * 38px);
+    width: calc(0.7 * 205px);
+    cursor: pointer;
+    text-align: center;
+    border: none;
+}
+.contact-form .col-md-12 {
+    padding-bottom: 15px;
+}
+.contact-form .col-md-6 {
+    padding-bottom: 15px;
+}
+
+.contact-form  input::placeholder {
+    color: #ffffff;
+    text-align: start;
+
+}
+.contact-form  textarea::placeholder {
+    color: #ffffff;
+    text-align: start;
+
+}
+.contact-form h3{
+    text-align: start;
+    margin-bottom: 10px;
+}
+.contact-form .submit-contact {
+    background-color: #7F7F00;
+    color: #FFFFFF;
+
+    border-radius: 20px;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+    border: none;
+}
+
+@media (max-width: calc(768px)) {
+    footer .handmade{
+        display: contents;
+        margin-bottom: 10px;
+    }
+
+    footer .col-md-3 {
+        padding-bottom: 15px;
+        text-align: center;
+    }
+
+    footer  .col-md-2 {
+        padding-bottom: 15px;
+        margin: auto;
+        text-align: center;
+    }
+
+    footer  .col-md-6 {
+        padding-bottom: 15px;
+        margin: auto;
+        text-align: center;
+    }
+
+    footer  .contact-form {
+        padding: 10%;
+        text-align: center;
+    }
+
+    footer  .app-box {
+        width: 50%;
+
+        margin-left: 25%;
+    }
+}
+
+@media (max-width: calc(480px)) {
+    footer .handmade{
+        display: contents;
+        margin-bottom: 10px;
+
+    }
+
+    footer .col-md-3 {
+        padding-bottom: 15px;
+        text-align: center;
+    }
+
+    footer  .col-md-2 {
+        padding-bottom: 15px;
+        margin: auto;
+        text-align: center;
+    }
+
+    footer  .col-md-6 {
+        padding-bottom: 15px;
+        margin: auto;
+        text-align: center;
+    }
+
+    footer  .contact-form {
+        padding: 10%;
+        text-align: center;
+    }
+
+    footer  .app-box {
+        width: 50%;
+
+        margin-left: 25%;
+    }
+}
+
+
+
