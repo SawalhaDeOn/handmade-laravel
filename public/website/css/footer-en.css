@@ -150,6 +150,11 @@ footer {
 }
 
 @media (max-width: calc(768px)) {
+    footer .handmade{
+        display: contents;
+        margin-bottom: 10px;
+    }
+
     footer .col-md-3 {
         padding-bottom: 15px;
         text-align: center;
@@ -180,6 +185,11 @@ footer {
 }
 
 @media (max-width: calc(480px)) {
+    footer .handmade{
+        display: contents;
+        margin-bottom: 10px;
+
+    }
 
     footer .col-md-3 {
         padding-bottom: 15px;

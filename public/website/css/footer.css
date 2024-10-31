@@ -152,6 +152,15 @@ footer {
 }
 
 @media (max-width: calc(768px)) {
+
+    footer .handmade{
+        display: contents;
+    }
+
+    footer p{
+        margin: 10px;
+    }
+
     footer .col-md-3 {
         padding-bottom: 15px;
         text-align: center;
@@ -179,10 +188,26 @@ footer {
 
         margin-right: 25%;
     }
+
+    footer .social-icons {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    footer .social-icons a {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
 }
 
 @media (max-width: calc(480px)) {
-
+    footer .handmade{
+        display: contents;
+    }
+    footer p{
+        margin: 10px;
+    }
     footer .col-md-3 {
         padding-bottom: 15px;
         text-align: center;
