@@ -327,7 +327,7 @@
             msgClass = "info";
             msg = msg.substring(2);
         }
-        toastr[msgClass](msg, "{{__('Insurey')}}");
+        toastr[msgClass](msg, "{{__('Handmade')}}");
     }
 
     function highlightIfEmpty(input) {
