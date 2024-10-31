@@ -177,49 +177,101 @@
 
     @if($lang==1)
     $('.owl-carousel').owlCarousel({
+        autoplay: true,
         center: true,
         loop: true,
-        autoplay: true,
-        autoplayTimeout: 6000,
-        autoplayHoverPause: true,
-        margin: 10,
         nav: false,
+        autoplayTimeout: 6000,
+        margin: 10,
+        responsiveClass: true,
         responsive: {
             0: {
-                items: 1
+                items: 1,
+                nav: true
             },
             600: {
-                items: 2
+                items: 3,
+                nav: true
             },
             1000: {
-                items: 3
+                items: 4,
+                nav: false
             }
-        }
-    })
+        },
+        onInitialized: setItemSizes,
+        onTranslated: setItemSizes
+
+    });
+
+
+
+
     @else
     $('.owl-carousel').owlCarousel({
-        rtl: true,
-        center: true,
         autoplay: true,
-        autoplayTimeout: 6000,
-        autoplayHoverPause: true,
+        center: true,
         loop: true,
-        margin: 10,
         nav: false,
+        rtl: true,
+        autoplayTimeout: 6000,
+        margin: 10,
+        responsiveClass: true,
         responsive: {
             0: {
-                items: 1
+                items: 1,
+                nav: true
             },
             600: {
-                items: 2
+                items: 3,
+                nav: true
             },
             1000: {
-                items: 3
+                items: 4,
+                nav: false
             }
-        }
-    })
+        },
+        onInitialized: setItemSizes,
+        onTranslated: setItemSizes
+
+    });
+
+
+
     @endif
 
+    function setItemSizes() {
+        $('.owl-item').each(function (index, element) {
+            var $img = $(element).find('img');
+
+            if ($(element).hasClass('center') || $(element).prev().hasClass('center')) {
+                $(element).css('margin-top', '0px');
+
+                $img.css({
+                    'height': '305px',
+                    'max-width': '274px',
+                    'border-radius': '50px',
+                    'box-shadow': '0px 4px 10px rgba(0, 0, 0, 0.2)'
+                });
+            } else {
+                if ($(element).hasClass('active') || $(element).next().hasClass('cloned active')) {
+                    $(element).css('margin-top', '100px');
+
+                }
+
+                $img.css({
+
+                    'height': '176px',
+                    'max-width': '273px',
+                    'border-radius': '50px',
+                    'box-shadow': '0px 4px 10px rgba(0, 0, 0, 0.2)',
+
+
+
+                });
+            }
+        });
+
+    }
 
 
     jQuery(document).on('click', '#submit_contact1', function () {

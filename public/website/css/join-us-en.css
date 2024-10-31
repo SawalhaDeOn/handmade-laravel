@@ -98,7 +98,19 @@ input[type="checkbox"] {
     align-items: center;
     justify-content: flex-end;
 }
-
+.join-us-form input[type="text"],
+.join-us-form input[type="email"],
+.join-us-form input[type="url"],
+.join-us-form input[type="tel"],
+.join-us-form input[type="file"] {
+    border: 2px solid #B48B2E;
+    font-size: 22px;
+    color: #000000;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
 .label {
     margin-left: 10px;
     font-size: 30px;
@@ -109,11 +121,12 @@ input[type="checkbox"] {
     border: 2px solid #B48B2E;
     border-radius: 20px;
     padding: 5px;
-    margin-top: 20px;
+    margin-top: 5px;
     margin-bottom: 10px;
     width: 100%;
     justify-content: space-between;
 }
+
 
 .icon-label {
     padding: 5px;

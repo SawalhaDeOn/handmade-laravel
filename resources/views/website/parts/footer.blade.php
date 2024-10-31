@@ -195,22 +195,10 @@
                     @endforeach
                 </div>
                 <div class="col-md-3  contact-info">
-                    <div >{{__('About Us')}}</div>
-                    @foreach($featurs as $s)
-                        @if($lang==1)
-                            <p>{{$s->name_en}}</p>
-                        @elseif($lang==3)
-                            <p>{{$s->name_he}}</p>
-                        @else
-                            <p>{{$s->name}}</p>
-                        @endif
-                    @endforeach
+                    <h2>{{__('About Us')}}</h2>
+                   <p></p>
                 </div>
-
-
-
-
-                        <div class="col-md-4 contact-form">
+                <div class="col-md-4 contact-form">
                     <form class="ajaxForm" id="formy" method="post" action="leadForm1"
                           enctype="multipart/form-data">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}"/>
