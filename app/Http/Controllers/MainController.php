@@ -105,57 +105,63 @@ class MainController extends Controller
 
 
     public function leadForm2(Request $request)
-  {
-      $message = "";
-      $page = "";
-      try {
-          $request->validate([
-              'name' => 'required',
-              'email' => 'required|email',
-              'phone' => 'required',
-              'product_type' => 'required',
-              'whatsapp' => 'nullable',
-              'facebook_link' => 'nullable|url',
-              'instagram_link' => 'nullable|url',
-              'product_image' => 'required|image',
-              'brand' => 'required',
-              'terms' => 'accepted',
-          ], [
-              'name.required' => 'Customer name is required.',
-              'email.required' => 'Customer email is required.',
-              'phone.required' => 'Customer mobile is required.',
-              'product_type.required' => 'Product type is required.',
-              'product_image.required' => 'Product image is required.',
-              'product_image.image' => 'Product image must be an image file.',
-              'brand.required' => 'Trade mark is required.',
-              'terms.accepted' => 'You must accept the terms and conditions.',
-          ]);
+    {
+        $message = "";
+        $page = "";
+        try {
+            $request->validate([
+                'name' => 'required',
+                'email' => 'required|email',
+                'phone' => 'required',
+                'product_type' => 'required',
+                'whatsapp' => 'nullable',
+                'facebook_link' => 'nullable|url',
+                'instagram_link' => 'nullable|url',
+                'product_image' => 'required|image',
+                'brand' => 'required',
+                'terms' => 'accepted',
+            ], [
+                'name.required' => 'Customer name is required.',
+                'email.required' => 'Customer email is required.',
+                'phone.required' => 'Customer mobile is required.',
+                'product_type.required' => 'Product type is required.',
+                'product_image.required' => 'Product image is required.',
+                'product_image.image' => 'Product image must be an image file.',
+                'brand.required' => 'Trade mark is required.',
+                'terms.accepted' => 'You must accept the terms and conditions.',
+            ]);
 
-          $lead = App\Models\Lead::create($request->all());
+            $imagePath = $request->file('product_image')->store('images');
+            $hashName = $request->file('product_image')->hashName();
 
-          $data = ["lead" => $lead];
-          /* Mail::send('website.welcome', $data, function ($message) {
+            $lead = new App\Models\Lead($request->except('product_image', 'terms'));
 
-               $message->from('website@insurey.co');
-               $message->to('mkurdi@developon.co');
+            $lead->product_image = $hashName;
+            $lead->terms = $request->has('terms') ? 1 : 0;
+            $lead->save();
 
-               $message->subject('Lead request');
-           });
-           Mail::send('website.notification', $data, function ($message) use ($email) {
-               $message->from('website@insurey.co');
-               $message->to('mkurdi@developon.co');
-               $message->subject('Received Notification');
-           });*/
+            $data = ["lead" => $lead];
 
+            /*Mail::send('website.welcome', $data, function ($message) {
+                $message->from('website@insurey.co');
+                $message->to('mkurdi@developon.co');
+                $message->subject('Lead request');
+            });
+            Mail::send('website.notification', $data, function ($message) use ($email) {
+                $message->from('website@insurey.co');
+                $message->to('mkurdi@developon.co');
+                $message->subject('Received Notification');
+            });*/
 
-          $message = "Thanks; We will call you soon Within 48 Hours";
-      } catch (\Exception $e) {
-          $message = $e->getMessage();
-          return \Response::json(['status' => '0', 'msg' => "e:" . $message, 'close' => false]);
-      }
+            $message = "Thanks; We will call you soon Within 48 Hours";
+        } catch (\Exception $e) {
+            $message = $e->getMessage();
+            return \Response::json(['status' => '0', 'msg' => "e:" . $message, 'close' => false]);
+        }
 
-      $message = Lang::get("Thanks for register");
-      return \Response::json(['status' => '1', 'msg' => "s:" . $message, 'close' => true]);
-  }
+        $message = Lang::get("Thanks for register");
+        return \Response::json(['status' => '1', 'msg' => "s:" . $message, 'close' => true]);
+    }
+
 
 }

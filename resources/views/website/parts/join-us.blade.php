@@ -9,7 +9,7 @@
             <div class="text3">{{ __('Palestinian Creativity') }}</div>
         </div>
 
-        <form action="leadForm2" method="post" class="join-us-form mt-4 ajaxForm2" id="formy" enctype="multipart/form-data">
+        <form action="leadForm2" method="post" class="join-us-form mt-4" id="formy" enctype="multipart/form-data">
             <input type="hidden" name="_token" value="{{ csrf_token() }}"/>
             <div class="row">
                 <div class="col-md-4 form-group">
