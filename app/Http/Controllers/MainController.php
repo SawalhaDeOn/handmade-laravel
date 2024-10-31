@@ -105,55 +105,57 @@ class MainController extends Controller
 
 
     public function leadForm2(Request $request)
-    {
-        $message = "";
-        $page = "";
-        //return $this->recapthaCheck($request->input('g-recaptcha-response'));
-        /* if($this->recapthaCheck($request->input('g-recaptcha-response'))==1) {*/
-        try {
-            $request->validate([
-                'name' => 'required',
+  {
+      $message = "";
+      $page = "";
+      try {
+          $request->validate([
+              'name' => 'required',
+              'email' => 'required|email',
+              'phone' => 'required',
+              'product_type' => 'required',
+              'whatsapp' => 'nullable',
+              'facebook_link' => 'nullable|url',
+              'instagram_link' => 'nullable|url',
+              'product_image' => 'required|image',
+              'brand' => 'required',
+              'terms' => 'accepted',
+          ], [
+              'name.required' => 'Customer name is required.',
+              'email.required' => 'Customer email is required.',
+              'phone.required' => 'Customer mobile is required.',
+              'product_type.required' => 'Product type is required.',
+              'product_image.required' => 'Product image is required.',
+              'product_image.image' => 'Product image must be an image file.',
+              'brand.required' => 'Trade mark is required.',
+              'terms.accepted' => 'You must accept the terms and conditions.',
+          ]);
 
-                'mobile' => 'required',
+          $lead = App\Models\Lead::create($request->all());
 
-            ], [
-                'name.required' => 'customer name is required.',
-                'mobile.required' => 'customer mobile is required',
+          $data = ["lead" => $lead];
+          /* Mail::send('website.welcome', $data, function ($message) {
 
-            ]);
-            $lead = App\Models\Lead::create($request->all());
+               $message->from('website@insurey.co');
+               $message->to('mkurdi@developon.co');
 
-            $data = ["lead" => $lead
-
-            ];
-            /* Mail::send('website.welcome', $data, function ($message) {
-
-                 $message->from('website@insurey.co');
-                 $message->to('mkurdi@developon.co');
-
-                 $message->subject('Lead request');
-             });
-             Mail::send('website.notification', $data, function ($message) use ($email) {
-                 $message->from('website@insurey.co');
-                 $message->to('mkurdi@developon.co');
-                 $message->subject('Received Notification');
-             });*/
+               $message->subject('Lead request');
+           });
+           Mail::send('website.notification', $data, function ($message) use ($email) {
+               $message->from('website@insurey.co');
+               $message->to('mkurdi@developon.co');
+               $message->subject('Received Notification');
+           });*/
 
 
-            $message = "Thanks; We will call you soon Within 48 Hours";
+          $message = "Thanks; We will call you soon Within 48 Hours";
+      } catch (\Exception $e) {
+          $message = $e->getMessage();
+          return \Response::json(['status' => '0', 'msg' => "e:" . $message, 'close' => false]);
+      }
 
-        } catch (\Exception $e) {
-            $message = $e->getMessage();
-            return \Response::json(array('status' => '0', 'msg' => "e:" . $message, 'close' => false));
-        }
-        /* }
-         else{
-             return \Response::json(array('status' => '0', 'msg' => "e:" . 'Please check google recaptcha', 'close' => false, 'modal' => 'modal-treat'));
-         }*/
-
-        $message = Lang::get("Thanks for register");
-        return \Response::json(array('status' => '1', 'msg' => "s:" . $message, 'close' => true));
-
-    }
+      $message = Lang::get("Thanks for register");
+      return \Response::json(['status' => '1', 'msg' => "s:" . $message, 'close' => true]);
+  }
 
 }

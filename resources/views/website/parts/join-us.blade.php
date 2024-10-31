@@ -9,7 +9,7 @@
             <div class="text3">{{ __('Palestinian Creativity') }}</div>
         </div>
 
-        <form action="leadForm1" method="post" class="join-us-form mt-4 ajaxForm" id="formy" enctype="multipart/form-data">
+        <form action="leadForm2" method="post" class="join-us-form mt-4 ajaxForm2" id="formy" enctype="multipart/form-data">
             <input type="hidden" name="_token" value="{{ csrf_token() }}"/>
             <div class="row">
                 <div class="col-md-4 form-group">
@@ -28,7 +28,7 @@
             <div class="row">
                 <div class="col-md-4 form-group">
                     <label for="product-type">{{ __('Product Type') }}</label>
-                    <input type="text" id="product-type" name="product-type" placeholder="{{ __('Product Type') }}" class="form-control" required>
+                    <input type="text" id="product_type" name="product_type" placeholder="{{ __('Product Type') }}" class="form-control" required>
                 </div>
                 <div class="col-md-4 form-group">
                     <label for="instagram">{{ __('Instagram Link') }}</label>
@@ -52,7 +52,7 @@
                     <label for="product-image">{{ __('Product Image') }}</label>
                     <div class="input-wrapper">
                         <div class="file-input-wrapper">
-                            <input type="file" id="product-image" name="product-image" class="form-control" accept="image/*" required style="display: none;">
+                            <input type="file" id="product-image" name="product_image" class="form-control" accept="image/*" required style="display: none;">
                             <label for="product-image" class="icon-label">
                                 <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.3992 29.9818H20.3893C27.0477 29.9818 29.7111 27.3184 29.7111 20.66V12.6699C29.7111 6.01151 27.0477 3.34814 20.3893 3.34814H12.3992C5.74076 3.34814 3.07739 6.01151 3.07739 12.6699V20.66C3.07739 27.3184 5.74076 29.9818 12.3992 29.9818Z" stroke="#7F7F00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
