@@ -31,7 +31,7 @@
             @php $count = 0; @endphp
             @foreach ($sliders as $slider)
                 <div class="image-item {{ ($count == 0) ? 'active' : '' }}">
-                    <img src="{{ $slider->image_url }}" alt="صورة">
+                    <img src="images/{{ $slider->image_url }}" alt="{{$slider->name}}">
                 </div>
                 @php $count++; @endphp
             @endforeach
